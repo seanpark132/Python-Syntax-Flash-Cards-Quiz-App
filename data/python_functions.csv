@@ -4,11 +4,11 @@ x += 5
 print(x)",10,Add to the current value of n
 "s1 = ""Hi"" 
 s2 = ""Sean"" 
-print(s1 + s2)","""HiSean""",A new string is created with the added strings
+print(s1 + s2)",HiSean,A new string is created with the added strings
 "x = 10 
 print(f""I have {x} apples"")",I have 10 apples,"f""{__}"" to add variables to a print statement"
 "x = 25 
-print(float(x))",25.0,Convert x from an int to a float
+print(float(x))",25,Convert x from an int to a float
 "x = 6 ** 2
 print(x)",36,** is the exponent operator
 "x = 13 % 3
@@ -33,7 +33,7 @@ print(x)","[1, 2, 3]","Slice a list from [index1:index2], excluding the end inde
 print(x)","0, 2, 4, 6, 8","range(start, end, step) creates a sequence (not a list) of numbers"
 "word = ""Fantastic"" 
 no_a = word.replace(""a"", """")
-print(no_a)","""Fntstic""",Replace specific characters with another one given
+print(no_a)",Fntstic,Replace specific characters with another one given
 "words = ['duck', 'shark', 'cat'] 
 words.sort()
 print(words)","[""cat"", ""duck"", ""shark""]",Sort a list alphabetically or from smallest to greatest
