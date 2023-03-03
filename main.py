@@ -15,7 +15,8 @@ left_timer = None
 button_pressed = False
 
 #  Read CSV Data
-data = pandas.read_csv("data/python_functions.csv")
+DATA_TO_READ = "data/python_functions.csv"
+data = pandas.read_csv(DATA_TO_READ)
 data_dict = data.to_dict(orient="records")
 
 
@@ -126,7 +127,7 @@ flip_next_button.grid(column=0, row=2)
 timer_label = Label(text="Time left: ", bg=BACKGROUND_COLOR, font=("Ariel", 25, "bold"))
 timer_label.grid(column=1, row=0, sticky="W")
 score_label = Label(text="Score:     ", bg=BACKGROUND_COLOR, font=("Ariel", 25, "bold"))
-score_label.grid(column=1, row=1,sticky="W")
+score_label.grid(column=1, row=1, sticky="W")
 
 new_card()
 
