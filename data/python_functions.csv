@@ -7,7 +7,7 @@ s2 = ""Sean""
 print(s1 + s2)",HiSean,A new string is created with the added strings
 "x = 10 
 print(f""I have {x} apples"")",I have 10 apples,"f""{__}"" to add variables to a print statement"
-"x = 25 
+"x = 25.0 
 print(float(x))",25,Convert x from an int to a float
 "x = 6 ** 2
 print(x)",36,** is the exponent operator
