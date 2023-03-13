@@ -3,8 +3,8 @@ from tkinter import *
 import random
 
 BACKGROUND_COLOR = "#B1DDC6"
-LABEL_FONT = ("Ariel", 20, "italic")
-TEXT_FONT = ("Ariel", 17, "bold")
+LABEL_FONT = ("Arial", 20, "italic")
+TEXT_FONT = ("Arial", 17, "bold")
 SCORE = 0
 TOTAL_CARDS = 0
 TIME_SECONDS = 30
@@ -36,9 +36,9 @@ def new_card():
         flip_next_button.config(image=flip_img, command=lambda: [flip_card(), button_on()])
         random_function = random.choice(data_dict)
 
-        canvas.itemconfig(in_out_label, text="Input:", fill="black")
+        canvas.itemconfig(input_label, text="Input:", fill="black")
         canvas.itemconfig(card, image=input_card_img)
-        canvas.itemconfig(in_out_text, text=random_function["Input"], fill="black")
+        canvas.itemconfig(input_text, text=random_function["Input"], fill="black")
         canvas.itemconfig(correct_incorrect_label, text="")
         canvas.itemconfig(entry_label, text="What is the output?", fill="black")
         canvas.itemconfig(answer, window=entry)
@@ -66,8 +66,8 @@ def flip_card():
     timer_label.config(text="")
 
     canvas.itemconfig(card, image=output_card_img)
-    canvas.itemconfig(in_out_label, text="Correct Output:", fill="white")
-    canvas.itemconfig(in_out_text, text=correct_output, fill="white")
+    canvas.itemconfig(input_label, text="Correct Output:", fill="white")
+    canvas.itemconfig(input_text, text=correct_output, fill="white")
     canvas.itemconfig(entry_label, text="Your answer:", fill="white")
     canvas.itemconfig(answer, window=answer_text)
     canvas.itemconfig(definition_label, text="Definition:")
@@ -105,14 +105,14 @@ canvas = Canvas(width=800, height=526, bg=BACKGROUND_COLOR, highlightthickness=0
 input_card_img = PhotoImage(file="images/card_front.png")
 output_card_img = PhotoImage(file="images/card_back.png")
 card = canvas.create_image(400, 263, image=input_card_img)
-in_out_label = canvas.create_text(400, 60, text="", font=LABEL_FONT)
-in_out_text = canvas.create_text(400, 140, text="", font=TEXT_FONT)
-correct_incorrect_label = canvas.create_text(400, 220, text="", font=("Ariel", 30, "italic"))
+input_label = canvas.create_text(400, 60, text="", font=LABEL_FONT)
+input_text = canvas.create_text(400, 130, text="", font=TEXT_FONT)
+correct_incorrect_label = canvas.create_text(400, 200, text="", font=("Arial", 30, "italic"))
 entry_label = canvas.create_text(400, 280, text="", font=LABEL_FONT)
-entry = Entry(width=60, highlightthickness=2, highlightcolor="black")
+entry = Entry(width=30, highlightthickness=2, highlightcolor="black", font=("Arial", 20))
 entry.focus()
 answer_text = Label(text="", bg="#91c2af", fg="white", font=TEXT_FONT)
-answer = canvas.create_window(400, 310, window=entry)
+answer = canvas.create_window(400, 330, window=entry)
 definition_label = canvas.create_text(400, 400, text="",  font=LABEL_FONT)
 definition_text = canvas.create_text(400, 430, text="", font=TEXT_FONT)
 canvas.grid(column=0, row=0, rowspan=2, padx=(0,20))
@@ -124,9 +124,9 @@ flip_next_button = Button(bg=BACKGROUND_COLOR, highlightthickness=0, bd= 0)
 flip_next_button.grid(column=0, row=2)
 
 # VISUAL TIMER / SCORE SETUP
-timer_label = Label(text="Time left: ", bg=BACKGROUND_COLOR, font=("Ariel", 25, "bold"))
+timer_label = Label(text="Time left: ", bg=BACKGROUND_COLOR, font=("Arial", 25, "bold"))
 timer_label.grid(column=1, row=0, sticky="W")
-score_label = Label(text="Score:     ", bg=BACKGROUND_COLOR, font=("Ariel", 25, "bold"))
+score_label = Label(text="Score:     ", bg=BACKGROUND_COLOR, font=("Arial", 25, "bold"))
 score_label.grid(column=1, row=1, sticky="W")
 
 new_card()
