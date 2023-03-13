@@ -3,8 +3,8 @@ from tkinter import *
 import random
 
 BACKGROUND_COLOR = "#B1DDC6"
-LABEL_FONT = ("Ariel", 20, "italic")
-TEXT_FONT = ("Ariel", 17, "bold")
+LABEL_FONT = ("Arial", 20, "italic")
+TEXT_FONT = ("Arial", 17, "bold")
 SCORE = 0
 TOTAL_CARDS = 0
 TIME_SECONDS = 30
@@ -107,9 +107,9 @@ output_card_img = PhotoImage(file="images/card_back.png")
 card = canvas.create_image(400, 263, image=input_card_img)
 input_label = canvas.create_text(400, 60, text="", font=LABEL_FONT)
 input_text = canvas.create_text(400, 130, text="", font=TEXT_FONT)
-correct_incorrect_label = canvas.create_text(400, 200, text="", font=("Ariel", 30, "italic"))
+correct_incorrect_label = canvas.create_text(400, 200, text="", font=("Arial", 30, "italic"))
 entry_label = canvas.create_text(400, 280, text="", font=LABEL_FONT)
-entry = Entry(width=30, highlightthickness=2, highlightcolor="black", font=("Ariel", 20))
+entry = Entry(width=30, highlightthickness=2, highlightcolor="black", font=("Arial", 20))
 entry.focus()
 answer_text = Label(text="", bg="#91c2af", fg="white", font=TEXT_FONT)
 answer = canvas.create_window(400, 330, window=entry)
